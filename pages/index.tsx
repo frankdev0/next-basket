@@ -1,9 +1,26 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import { Inter } from "next/font/google";
+import styles from "@/styles/Home.module.css";
+import { MdOutlineEmail } from "react-icons/md";
+import Link from "next/link";
+import { IoPersonOutline } from "react-icons/io5";
+import { IoSearchOutline } from "react-icons/io5";
+import { BsCart } from "react-icons/bs";
+import { IoIosHeartEmpty } from "react-icons/io";
+import { IoIosArrowDown } from "react-icons/io";
+import { FaFacebook, FaTwitter } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa6";
+import { BiSolidBookReader } from "react-icons/bi";
+import { VscBook } from "react-icons/vsc";
+import { FaArrowTrendUp } from "react-icons/fa6";
+import { TfiAlarmClock } from "react-icons/tfi";
+import { AiOutlineAreaChart } from "react-icons/ai";
+import { IoIosArrowForward } from "react-icons/io";
+import { RiStarSFill } from "react-icons/ri";
+import { RiStarLine } from "react-icons/ri";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -14,101 +31,569 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.main} ${inter.className}`}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/index.tsx</code>
-          </p>
+      <main className={` ${inter.className}`}>
+        <nav>
+          <div
+            className={`${styles.topnav} d-flex justify-content-between align-items-center`}
+          >
+            <div className="d-flex align-items-center">
+              <div className="d-flex align-items-center">
+                <Image
+                  src="/call.png"
+                  width={15}
+                  height={15}
+                  alt="logo"
+                  className="mx-2"
+                />
+                <p className={styles.navcontact}>(225) 555-0118</p>
+              </div>
+              <div className="d-flex">
+                <MdOutlineEmail className={styles.emailicon} />
+                <p className={styles.navcontact}>michelle.rivera@example.com</p>
+              </div>
+            </div>
+            <div>
+              <p className={styles.navcontact}>
+                Follow Us and get a chance to win 80% off
+              </p>
+            </div>
+            <div className="d-flex align-items-center">
+              <p className={styles.navcontact}>Follow Us :</p>
+              <div className="d-flex align-items-center">
+                <Image src="/instagram.png" width={20} height={20} alt="logo" />
+                <Image
+                  src="/youtube.png"
+                  width={20}
+                  height={20}
+                  alt="logo"
+                  className={styles.logo}
+                />
+                <Image src="/facebook.png" width={20} height={20} alt="logo" />
+                <Image src="/twitter.png" width={20} height={20} alt="logo" />
+              </div>
+            </div>
+          </div>
           <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
+            <div className="d-flex justify-content-between align-items-ceneter">
+              <div>
+                <div className={styles.leftnav}>
+                  <div>
+                    <Image src="/logo.png" width={100} height={50} alt="logo" />
+                  </div>
+                  <div>
+                    <Link href="#" className={styles.menulink}>
+                      Home
+                    </Link>
+                    <Link href="#" className={styles.menulink}>
+                      Shop <IoIosArrowDown />
+                    </Link>
+                    <Link href="#" className={styles.menulink}>
+                      About
+                    </Link>
+                    <Link href="#" className={styles.menulink}>
+                      Blog
+                    </Link>
+                    <Link href="#" className={styles.menulink}>
+                      Contact
+                    </Link>
+                    <Link href="#" className={styles.menulink}>
+                      Pages
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.rightnav}>
+                <IoPersonOutline className={styles.personicon} />
+                <Link href="#" className={styles.logs}>
+                  Login /
+                </Link>
+                <Link href="#" className={styles.logs}>
+                  Logout
+                </Link>
+                <div className="d-flex">
+                  <IoSearchOutline className={styles.space} />
+                  <div className={styles.iconContainer}>
+                    <sup className={styles.sup}>1</sup>
+                    <BsCart className={styles.space} />
+                  </div>
+                  <div className={styles.iconContainer}>
+                    <sup className={styles.sup}>1</sup>
+                    <IoIosHeartEmpty className={styles.space} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        {/* HERO SECTION */}
+
+        <div className='mx-5'>
+        <div className={styles.herogrids}>
+          <div className={styles.gridone}>
+            {" "}
+            <Image
+              src="/one.png"
+              width={200}
+              height={200}
+              alt="banner"
+              className={styles.banner}
+            />
+            <div className={styles.boxtext}>
+              <h6 className={styles.name}>5 items</h6>
+              <h2 className={styles.postheader}>FURNITURE</h2>
+              <h6 className={styles.producttitle}>Read More</h6>
+            </div>
+          </div>
+          <div className={styles.gridtwo}>
+            {" "}
+            <Image
+              src="/two.png"
+              width={200}
+              height={200}
+              alt="banner"
+              className={styles.banner}
+            />
+             <div className={styles.boxtext}>
+              <h6 className={styles.name}>5 items</h6>
+              <h2 className={styles.postheader}>FURNITURE</h2>
+              <h6 className={styles.producttitle}>Read More</h6>
+            </div>
+          </div>
+          <div className={styles.gridthree}>
+            {" "}
+            <Image
+              src="/three.png"
+              width={200}
+              height={200}
+              alt="banner"
+              className={styles.banner}
+            />
+             <div className={styles.boxtext}>
+              <h6 className={styles.name}>5 items</h6>
+              <h2 className={styles.postheader}>FURNITURE</h2>
+              <h6 className={styles.producttitle}>Read More</h6>
+            </div>
+          </div>
+          <div className={styles.gridfour}>
+            {" "}
+            <Image
+              src="/four.png"
+              width={200}
+              height={200}
+              alt="banner"
+              className={styles.banner}
+            />
+             <div className={styles.boxtext}>
+              <h6 className={styles.name}>5 items</h6>
+              <h2 className={styles.postheader}>FURNITURE</h2>
+              <h6 className={styles.producttitle}>Read More</h6>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        {/* SECOND SECTION */}
+
+        <div>
+          <div className="text-center my-5">
+            <div className="my-4">
+            <h4 className={styles.featured}>Featured Products</h4>
+            <h3 className={styles.bestseller}>BESTSELLER PRODUCTS</h3>
+            <p className={styles.conflict}>Problems trying to resolve the conflict between </p>
+            </div>
+            
+          </div>
+          <div className={styles.productgrid}>
+            <div className={styles.eachproduct}>
+            <Image
+              src="/four.png"
+              width={150}
+              height={200}
+              alt="banner"
+            />
+            <h5 className={styles.producttitle}>Graphic Design</h5>
+            <Link href='#' className={styles.subtitle}>English Department</Link>
+            <div className="d-flex my-2 justify-content-center">
+              <h5 className={styles.priceone}>$16.48</h5>
+              <h5 className={styles.pricetwo}>$6.48</h5>
+            </div>
+            </div>
+            <div className={styles.eachproduct}>
+              <Image src='/chair.png' width={150} height={200} alt="chair"  />
+              <h5 className={styles.producttitle}>Graphic Design</h5>
+            <Link href='#' className={styles.subtitle}>English Department</Link>
+            <div className="d-flex my-2 justify-content-center">
+              <h5 className={styles.priceone}>$16.48</h5>
+              <h5 className={styles.pricetwo}>$6.48</h5>
+            </div>
+            </div>
+            <div className={styles.eachproduct}>
+            <Image src='/chair.png' width={150} height={200} alt="chair"  />
+              <h5 className={styles.producttitle}>Graphic Design</h5>
+            <Link href='#' className={styles.subtitle}>English Department</Link>
+            <div className="d-flex my-2 justify-content-center">
+              <h5 className={styles.priceone}>$16.48</h5>
+              <h5 className={styles.pricetwo}>$6.48</h5>
+            </div>
+            </div>
+            <div className={styles.eachproduct}>
+            <Image src='/chair.png' width={150} height={200} alt="chair"  />
+              <h5 className={styles.producttitle}>Graphic Design</h5>
+            <Link href='#' className={styles.subtitle}>English Department</Link>
+            <div className="d-flex my-2 justify-content-center">
+              <h5 className={styles.priceone}>$16.48</h5>
+              <h5 className={styles.pricetwo}>$6.48</h5>
+            </div>
+            </div>
+            <div className={styles.eachproduct}>
+            <Image src='/chair.png' width={150} height={200} alt="chair"  />
+              <h5 className={styles.producttitle}>Graphic Design</h5>
+            <Link href='#' className={styles.subtitle}>English Department</Link>
+            <div className="d-flex my-2 justify-content-center">
+              <h5 className={styles.priceone}>$16.48</h5>
+              <h5 className={styles.pricetwo}>$6.48</h5>
+            </div>
+            </div>
+            <div className={styles.eachproduct}>
+            <Image src='/chair.png' width={150} height={200} alt="chair"  />
+              <h5 className={styles.producttitle}>Graphic Design</h5>
+            <Link href='#' className={styles.subtitle}>English Department</Link>
+            <div className="d-flex my-2 justify-content-center">
+              <h5 className={styles.priceone}>$16.48</h5>
+              <h5 className={styles.pricetwo}>$6.48</h5>
+            </div>
+            </div>
+            <div className={styles.eachproduct}>
+            <Image src='/chair.png' width={150} height={200} alt="chair"  />
+              <h5 className={styles.producttitle}>Graphic Design</h5>
+            <Link href='#' className={styles.subtitle}>English Department</Link>
+            <div className="d-flex my-2 justify-content-center">
+              <h5 className={styles.priceone}>$16.48</h5>
+              <h5 className={styles.pricetwo}>$6.48</h5>
+            </div>
+            </div>
+            <div className={styles.eachproduct}>
+            <Image src='/chair.png' width={150} height={200} alt="chair"  />
+              <h5 className={styles.producttitle}>Graphic Design</h5>
+            <Link href='#' className={styles.subtitle}>English Department</Link>
+            <div className="d-flex my-2 justify-content-center">
+              <h5 className={styles.priceone}>$16.48</h5>
+              <h5 className={styles.pricetwo}>$6.48</h5>
+            </div>
+            </div>
+            <div className={styles.eachproduct}>
+            <Image src='/chair.png' width={150} height={200} alt="chair"  />
+              <h5 className={styles.producttitle}>Graphic Design</h5>
+            <Link href='#' className={styles.subtitle}>English Department</Link>
+            <div className="d-flex my-2 justify-content-center">
+              <h5 className={styles.priceone}>$16.48</h5>
+              <h5 className={styles.pricetwo}>$6.48</h5>
+            </div>
+            </div>
+            <div className={styles.eachproduct}>
+            <Image src='/chair.png' width={150} height={200} alt="chair"  />
+              <h5 className={styles.producttitle}>Graphic Design</h5>
+            <Link href='#' className={styles.subtitle}>English Department</Link>
+            <div className="d-flex my-2 justify-content-center">
+              <h5 className={styles.priceone}>$16.48</h5>
+              <h5 className={styles.pricetwo}>$6.48</h5>
+            </div>
+            </div>
+          </div>
+          <div className={styles.btncontainer}>
+            <button className={styles.productbtn}>LOAD MORE PRODUCTS</button>
+          </div>
+        </div>
+        <div className="text-center my-5">
+            <h4 className={styles.featured}>Featured Products</h4>
+            <h3 className={styles.bestseller}>THE BEST SERVICES</h3>
+            <p className={styles.conflict}>Problems trying to resolve the conflict between </p>
+            </div>
+
+            <div className="d-flex align-items-center justify-content-center">
+            <div className={styles.growthgrid}>
+              <div className={styles.eachgrowth}>
+                <div><BiSolidBookReader className={styles.icons} /></div>
+                <h3 className={styles.benefitheader}>Easy Wins</h3>
+                <p className={styles.benefittext}>Get your best looking smile now</p>
+              </div>
+              <div className={styles.eachgrowth}>
+                <div><VscBook className={styles.icons}/></div>
+                <h3 className={styles.benefitheader}>Concrete</h3>
+                <p className={styles.benefittext}>Defalcate is most focused in helping you discover your most beautiful smile</p>
+              </div>
+              <div className={styles.eachgrowth}>
+                <div><FaArrowTrendUp className={styles.icons}/></div>
+                <h3 className={styles.benefitheader}>Hack Growth</h3>
+                <p className={styles.benefittext}>Overcame any hurdle or any other problem.</p>
+              </div>
+            </div>
+            </div>
+        <div>
+          <div className={styles.bannercontainer}>
+            <Image
+              src="/banner.png"
+              width={500}
+              height={300}
+              alt="banner"
+              className={styles.banner}
+            />
+            <div className={styles.bannertext}>
+              <p className={styles.textone}>Designing Better Experience</p>
+              <h2 className={styles.bannerheader}>
+                Problems trying to resolve the conflict between{" "}
+              </h2>
+              <p className={styles.bannertexts}>
+                Problems trying to resolve the conflict between the two major
+                realms of Classical physics:{" "}
+              </p>
+              <h3 className={styles.amount}>$16.48</h3>
+              <div>
+                <button className={styles.calltoaction}>
+                  ADD YOUR CALL TO ACTION
+                </button>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
+        <div>
+        <div>
+          <div className="text-center my-5">
+            <h6 className={styles.name}>Practice Advice</h6>
+            <h2 className={styles.postheader}>Featured Posts</h2>
+          </div>
+          <div className='d-flex justify-content-center'>
+          <div className={styles.wrappergrid}>
+          
+          <div className={styles.eachwrapper}>
+            <div className={styles.imgWrapper}>
+            <Image src='/room.png' width={300} height={300} alt="room"  className={styles.trendingimg}/>
+          <div className={styles.new}>NEW</div>
+            </div>
+          <div className={styles.textwrapper}>
+          <div>
+            <small className={styles.google}>Google</small>
+            <small className={styles.trending}>Trending</small>
+            <small className={styles.trending}>New</small>
+          </div>
+          <h4 className={styles.trendingtext}>Loudest à la Madison #1 (Lintegral)</h4>
+          <p className={styles.wrappertext}>We focus on ergonomics and meeting 
+              you where you work. Its only a 
+              keystroke away.</p>
+              <div>
+                <div className="d-flex justify-content-between align-items-center my-4">
+                <div className="d-flex align-items-center">
+                <TfiAlarmClock className={styles.clock}/> 
+                <small className={styles.trending}>22 April 2021</small>
+                </div>
+                <div className="d-flex align-items-center">
+                <AiOutlineAreaChart className={styles.chart}/>
+                <small className={styles.trending}> 10 comments </small>
+                </div>
+                </div>
+              </div>
+              <h6 className={styles.learnmore}>Learn More <IoIosArrowForward className={styles.clock}/></h6>
+              </div>
+          </div>
+          <div className={styles.eachwrapper}>
+            <div className={styles.imgWrapper}>
+            <Image src='/openplan.png' width={300} height={300} alt="room"  className={styles.trendingimg}/>
+          <div className={styles.new}>NEW</div>
+            </div>
+          <div className={styles.textwrapper}>
+          <div>
+            <small className={styles.google}>Google</small>
+            <small className={styles.trending}>Trending</small>
+            <small className={styles.trending}>New</small>
+          </div>
+          <h4 className={styles.trendingtext}>Loudest à la Madison #1 (Lintegral)</h4>
+          <p className={styles.wrappertext}>We focus on ergonomics and meeting 
+              you where you work. Its only a 
+              keystroke away.</p>
+              <div>
+                <div className="d-flex justify-content-between align-items-center my-4">
+                <div className="d-flex align-items-center">
+                <TfiAlarmClock className={styles.clock}/> 
+                <small className={styles.trending}>22 April 2021</small>
+                </div>
+                <div className="d-flex align-items-center">
+                <AiOutlineAreaChart className={styles.chart}/>
+                <small className={styles.trending}> 10 comments </small>
+                </div>
+                </div>
+              </div>
+              <h6 className={styles.learnmore}>Learn More <IoIosArrowForward className={styles.clock}/></h6>
+              </div>
+          </div>
+          <div className={styles.eachwrapper}>
+            <div className={styles.imgWrapper}>
+            <Image src='/kitchen.png' width={300} height={300} alt="room"  className={styles.trendingimg}/>
+          <div className={styles.new}>NEW</div>
+            </div>
+          <div className={styles.textwrapper}>
+          <div>
+            <small className={styles.google}>Google</small>
+            <small className={styles.trending}>Trending</small>
+            <small className={styles.trending}>New</small>
+          </div>
+          <h4 className={styles.trendingtext}>Loudest à la Madison #1 (Lintegral)</h4>
+          <p className={styles.wrappertext}>We focus on ergonomics and meeting 
+              you where you work. Its only a 
+              keystroke away.</p>
+              <div>
+                <div className="d-flex justify-content-between align-items-center my-4">
+                <div className="d-flex align-items-center">
+                <TfiAlarmClock className={styles.clock}/> 
+                <small className={styles.trending}>22 April 2021</small>
+                </div>
+                <div className="d-flex align-items-center">
+                <AiOutlineAreaChart className={styles.chart}/>
+                <small className={styles.trending}> 10 comments </small>
+                </div>
+                </div>
+              </div>
+              <h6 className={styles.learnmore}>Learn More <IoIosArrowForward className={styles.clock}/></h6>
+              </div>
+          </div>
+          
+          </div>
+          </div>
         </div>
+        </div>
+        {/* RATING SECTION */}
+        <div>
+          <div className="row my-5 align-items-center">
+            <div className="col-12 col-lg-6 text-center">
+              <div>
+              <h3 className={styles.benefitheader}>What they say about us</h3>
+              <div>
+              <Image src='/user.jpg' width={150} height={150} alt="user"  />
+              </div>
+              <div className='d-flex justify-content-center my-2'>
+              <RiStarSFill className={styles.star}/>
+              <RiStarSFill className={styles.star}/>
+              <RiStarSFill className={styles.star}/>
+              <RiStarSFill className={styles.star}/>
+              <RiStarLine className={styles.emptystar}/>
+              </div>
+              <h6 className={styles.learnmoree}>Slate helps you see how many more days you need to work to 
+                reach your financial goal.</h6>
+                <Link href='#' className={styles.name}>Regina Miles</Link>
+                <h6 className={`${styles.learnmore}  mx-auto my-2`}>Designer</h6>
+                </div>
+            </div>
+            <div className="col-12 col-lg-6">
+              <div className="d-flex justify-content-center">
+              <div className={styles.picgrid}>
+              <Image src='/camera.png' width={150} height={150} alt="camera"  />
+              <Image src='/redlady.png' width={150} height={150} alt="redlady"  />
+              <Image src='/path.png' width={150} height={150} alt="path"  />
+              <Image src='/flower.png' width={150} height={150} alt="flower"  />
+              <Image src='/lady.png' width={150} height={150} alt="lady"  />
+              <Image src='/write.png' width={150} height={150} alt="writing"  />
+              <Image src='/hill.png' width={150} height={150} alt="hill"  />
+              <Image src='/forest.png' width={150} height={150} alt="forest"  />
+              <Image src='/blue.png' width={150} height={150} alt="blue"  />
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* FOOTER SECTION */}
 
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
+        <div className={`${styles.topfooter} d-flex justify-content-between`}>
+          <div>
+            <div className={styles.bandage}>Bandage</div>
+          </div>
+          <div className={styles.footersocials}>
+            <FaFacebook className={styles.socials} />
+            <FaInstagram className={`${styles.socials} mx-3`} />
+            <FaTwitter className={styles.socials} />
+          </div>
+        </div>
+        <div className={styles.footergrid}>
+          <div>
+            <h6 className={styles.footertitle}>Company Info</h6>
+            <Link href="#" className={styles.footerlink}>
+              About Us
+            </Link>
+            <Link href="#" className={styles.footerlink}>
+              Carrier
+            </Link>
+            <Link href="#" className={styles.footerlink}>
+              We are Hiring
+            </Link>
+            <Link href="#" className={styles.footerlink}>
+              Blog
+            </Link>
+          </div>
+          <div>
+            <h6 className={styles.footertitle}>Legal</h6>
+            <Link href="#" className={styles.footerlink}>
+              About Us
+            </Link>
+            <Link href="#" className={styles.footerlink}>
+              Carrier
+            </Link>
+            <Link href="#" className={styles.footerlink}>
+              We are Hiring
+            </Link>
+            <Link href="#" className={styles.footerlink}>
+              Blog
+            </Link>
+          </div>
+          <div>
+            <h6 className={styles.footertitle}>Features</h6>
+            <Link href="#" className={styles.footerlink}>
+              Business Marketing
+            </Link>
+            <Link href="#" className={styles.footerlink}>
+              User Analytic
+            </Link>
+            <Link href="#" className={styles.footerlink}>
+              Live Chat
+            </Link>
+            <Link href="#" className={styles.footerlink}>
+              Unlimited Support
+            </Link>
+          </div>
+          <div>
+            <h6 className={styles.footertitle}>Resources</h6>
+            <Link href="#" className={styles.footerlink}>
+              IOS & Android
+            </Link>
+            <Link href="#" className={styles.footerlink}>
+              Watch a Demo
+            </Link>
+            <Link href="#" className={styles.footerlink}>
+              Customers
+            </Link>
+            <Link href="#" className={styles.footerlink}>
+              API
+            </Link>
+          </div>
+          <div>
+            <h6 className={styles.footertitle}>Get in Touch</h6>
+            <div className="d-flex">
+              <input
+                placeholder="Your email"
+                name="search"
+                type="text"
+                className={styles.footerinput}
+              />
+              <button className={styles.subscribe}>Subscribe</button>
+            </div>
+            <p className={styles.footertext}>Lore imp sum dolor Amit</p>
+          </div>
+        </div>
+        <div className={styles.lowerfooter}>
+          <p className={styles.copyright}>
+            Made With Love By Finland All Right Reserved{" "}
+          </p>
         </div>
       </main>
     </>
-  )
+  );
 }
